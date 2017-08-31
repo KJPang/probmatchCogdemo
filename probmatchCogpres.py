@@ -1,4 +1,5 @@
 #K Pang 2017
+#Only fully works on windows
 import sys
 import os
 import psychopy.visual
