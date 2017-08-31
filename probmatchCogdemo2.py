@@ -1,4 +1,4 @@
-#k.
+#K Pang 2017
 import sys
 import psychopy.visual
 import psychopy.event
@@ -46,7 +46,8 @@ midcross = psychopy.visual.TextStim(win=win, wrapWidth=100, height = 25)
 midcross.text = " + "
 inst1 = psychopy.visual.TextStim(win=win, wrapWidth=1000)
 
-mistakewords = "\n\nYou will have to pay the experimenter $10 unless the sequence is guessed correctly."
+correctwords = "\n\nYou will gain $1 if the sequence is guessed correctly."
+mistakewords = "\n\nYou will have to pay the experimenter $1 unless the sequence is guessed correctly."
 instructionwords = "\n\nUse the Q and P keys to input a sequence. Use Q for the first option shown and P for the second."
 
 #trials
@@ -61,22 +62,22 @@ for i in exptrials:
     #choose text to display
     if textchoice == 1:
         if condition == 0: 
-            inst1.text = text1a + chancelist[order1] + text1b + str(secondary) + text1c + instructionwords
+            inst1.text = text1a + chancelist[order1] + text1b + str(secondary) + text1c + correctwords + instructionwords
         else:
             inst1.text = text1a + chancelist[order1] + text1b + str(secondary) + text1c + mistakewords + instructionwords          
     elif textchoice == 2:
         if condition == 0: 
-            inst1.text = text2a + chancelist[order1] + text2b + str(secondary) + text2c + instructionwords
+            inst1.text = text2a + chancelist[order1] + text2b + str(secondary) + text2c + correctwords + instructionwords
         else:
             inst1.text = text2a + chancelist[order1] + text2b + str(secondary) + text2c + mistakewords + instructionwords
     elif textchoice == 3:
         if condition == 0: 
-            inst1.text = text3a + chancelist[order1] + text3b + str(secondary) + text3c + instructionwords
+            inst1.text = text3a + chancelist[order1] + text3b + str(secondary) + text3c + correctwords + instructionwords
         else:
             inst1.text = text3a + chancelist[order1] + text3b + str(secondary) + text3c + mistakewords + instructionwords
     elif textchoice == 4:
         if condition == 0: 
-            inst1.text = text4a + chancelist[order1] + text4b + str(secondary) + text4c + instructionwords 
+            inst1.text = text4a + chancelist[order1] + text4b + str(secondary) + text4c + correctwords + instructionwords 
         else:
             inst1.text = text4a + chancelist[order1] + text4b + str(secondary) + text4c + mistakewords + instructionwords
     inst1.draw()        
@@ -136,4 +137,4 @@ win.flip()
 psychopy.event.waitKeys()
 win.close()
 sys.exit()
-#presentation version
+#testing version
