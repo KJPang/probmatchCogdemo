@@ -28,6 +28,8 @@ du.text = "__________________"
 un.text = ""
 responsestring = ""
 
+print condition
+
 #initialize text
 text1a = "A 10 sided die has "
 text1b = " face(s) that show squares and "
